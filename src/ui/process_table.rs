@@ -67,9 +67,6 @@ pub fn draw_process_table(f: &mut Frame, app: &App, area: Rect) {
         };
 
         header_spans.push(Span::styled(padded, style));
-        if *width > 0 {
-            header_spans.push(Span::styled(" ", Style::default().bg(Color::Cyan)));
-        }
     }
     let header_line = Line::from(header_spans);
     f.render_widget(Paragraph::new(header_line), header_area);
